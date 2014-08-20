@@ -1,0 +1,82 @@
+a {
+  .transition(color 0.5s);
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav > li > a {
+  .transition(background 0.5s);
+}
+
+//
+// Form
+// --------------------------------------------------
+.form-control {
+  box-shadow: none !important;
+  .transition(border 0.5s);
+
+  &:focus {
+    border-color: @gray-dark;
+  }
+}
+
+.input-circle {
+  border-radius: 30px;
+}
+
+.carousel-control {
+  .fa {
+    top: 50%;
+    margin-top: -10px;
+    position: absolute;
+  }
+}
+
+//
+// Buttons
+// --------------------------------------------------
+.btn {
+  border: none !important;
+  padding: 7px 22px;
+  outline: none !important;
+  .transition(background 0.5s);
+}
+
+.btn-lg {
+  padding: 11px 26px 12px;
+  border-radius: 30px;
+}
+
+.btn-sm {
+  padding: 6px 20px;
+}
+
+.btn-xs {
+  padding: 2px 15px;
+}
+
+//
+// Jumbotron
+// --------------------------------------------------
+.jumbotron {
+  margin-bottom: 0;
+  background: url(../../images/bg-1.jpg) @brand-primary;
+}
+
+//
+// Page Header
+// --------------------------------------------------
+.page-header {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: url(../../images/bg-1.jpg) @brand-primary;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    margin: 40px 0;
+  }
+}
