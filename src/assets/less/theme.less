@@ -80,3 +80,34 @@ img {
     margin: 40px 0;
   }
 }
+
+.index-table {
+  th {
+    a {
+      font-size: 14px;
+      font-weight:900;
+    }
+
+    span {
+      float: right;
+    }
+
+    .asc::before{
+      font-size: 12px;
+      content: "▼";
+      color: black;
+    }
+
+    .desc::before{
+      font-size: 12px;
+      content: "▲";
+      color: black;
+    }
+  }
+
+  th::after {
+    content: ""; /* Older browser do not support empty content */
+    display: block;
+    clear: both;
+  }
+}

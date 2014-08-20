@@ -1,0 +1,14 @@
+{
+  "name": "SpendSmall",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "~3.2.6"
+  },
+  "scripts": {
+    "css" : "lessc src/assets/less/template.less > src/assets/less/template.css"
+  },
+  "devDependencies": {
+    "less": "~1.7.4"
+  }
+}

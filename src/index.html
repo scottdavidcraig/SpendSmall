@@ -57,7 +57,7 @@
               <div class="col-md-4 col-sm-6">
                 <!--<div class="icon-wrap"><img src="http://placehold.it/128x128" alt=""></div>-->
                 <h1>9.4bn</h1>
-                <h4>Went to the Top Ten 10 comanies </h4>
+                <h4>Went to the Top Ten 10 companies </h4>
                 <p>The top ten companies captured 10.5% of all spending with firms by local authorities.  
               </div>
 
@@ -73,11 +73,43 @@
         </section>
           
             
-
+        <!-- INTERACTIVE SPEND INDEX TABLE -->
         <section id="portfolio" class="section section-portfolio">
           <div class="container">
             <h2 class="section-title"><span>Local Authorty Spend Index</span></h2>
-            
+              <section ng-app="app" ng-controller="Table">
+                <span class="label">Ordered By: {{orderByField}}, Reverse Sort: {{reverseSort}}</span><br><br>
+                <table class="table table-bordered table-striped index-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <a href="" ng-click="orderByField='county'; reverseSort = !reverseSort">
+                        County 
+                        </a>
+                        <span ng-show="orderByField == 'county'">
+                          <span class="desc" ng-show="!reverseSort"></span>
+                          <span class="asc" ng-show="reverseSort"></span>
+                        </span>
+                      </th>
+                      <th style="width:19%;">
+                        <a href="" ng-click="orderByField='percent'; reverseSort = !reverseSort">
+                        SME 
+                        </a>
+                        <span ng-show="orderByField == 'percent'">
+                          <span class="desc"ng-show="!reverseSort"></span>
+                          <span class="asc" ng-show="reverseSort"></span>
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="row in data|orderBy:orderByField:reverseSort">
+                      <td>{{row.county}}</td>
+                      <td>{{row.percent}}%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
             </div>
           </div>
         
@@ -118,16 +150,7 @@
               </div>
                 
             </div>
-              
-              
-              
-              
-            
             </div>
-              
-            
-              
-              <
           </div>
         </section>
 
@@ -190,11 +213,13 @@ Email <a href="mailto:contact@spendnetwork.com">contact@spendnetwork.com</a><br>
         </div>
       </footer>
     </div>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap-3.0.3.min.js"></script>
     <script src="assets/js/jquery.singlePageNav.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/table.js"></script>
+
           
           <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
